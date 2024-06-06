@@ -13,7 +13,7 @@ function App() {
   return (
 
     <>
-      <h1 className='text-black  text-6xl text-center'>TO DO LIST </h1>
+      {/* <h1 className='text-black  text-6xl text-center'>TO DO LIST </h1> */}
       <NavBar />
       <Routes>
         <Route path='/' element={<Login />} />
