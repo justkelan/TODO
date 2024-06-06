@@ -5,12 +5,19 @@ import { useNavigate } from "react-router-dom";
 const AddTask = () => {
     const navigate = useNavigate();
 
+    useEffect(() =>{
+        if(!sessionStorage.getItem("user"))
+            navigate("/")
+    })
+
     const [msg, setMsg] = useState(null)
     const [formData, setFormData] = useState({
         task: "",
         owner: sessionStorage.getItem("user"),
         dueDate: "",
     })
+
+
 
     useEffect(() => {
         if (!sessionStorage.getItem("user"))
